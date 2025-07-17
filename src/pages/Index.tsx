@@ -15,6 +15,7 @@ const Index = () => {
     <ThemeProvider defaultTheme="system">
       <div className="min-h-screen">
         <Navbar />
+        xxxxxxxxxxxxxxxxxxxxxx
         <main>
           <Hero />
           <About />
