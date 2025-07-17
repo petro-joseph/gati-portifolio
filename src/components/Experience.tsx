@@ -2,9 +2,23 @@ import { Building, Calendar } from "lucide-react";
 
 const experiences = [
   {
+    company: "ictpack",
+    role: "Business and System Analyst",
+    period: "May 2024 - Present",
+    location: "Dar es Salaam, Tanzania",
+    description: "Analyzing business processes and system requirements to design intelligent, automated solutions that improve operational efficiency and drive growth.",
+    achievements: [
+      "Translating complex business needs into detailed technical specifications for development teams.",
+      "Identifying key areas for process automation and AI integration to reduce manual effort.",
+      "Designing system workflows and data models to ensure scalability and efficiency.",
+      "Acting as the bridge between business stakeholders and technical teams to guarantee project alignment."
+    ],
+    technologies: ["System Design", "Requirements Analysis", "Agile Methodologies", "UML", "Jira", "AI Strategy"]
+  },
+  {
     company: "UBX Tanzania Ltd",
     role: "Software Developer",
-    period: "Jun 2022 - Present",
+    period: "Jun 2022 - May 2024",
     location: "Mikocheni, Dar es Salaam, Tanzania",
     description: "Responsible for designing, developing, and deploying enterprise-grade payment systems for government authorities and financial institutions in Zanzibar.",
     achievements: [
@@ -19,23 +33,11 @@ const experiences = [
     ],
     technologies: ["NestJS", "TypeScript", "PostgreSQL", "Docker", "Kubernetes", "AWS", "Oracle"]
   },
-  {
-    company: "THPS",
-    role: "Software Developer",
-    period: "2018 - 2021",
-    description: "Worked on backend development of healthcare data systems, focusing on APIs, data pipelines, and cloud deployment.",
-    achievements: [
-      "Developed and maintained RESTful APIs for healthcare systems",
-      "Built data pipelines for reporting and analytics",
-      "Implemented Redis caching to improve performance",
-      "Deployed backend systems to Azure and maintained uptime"
-    ],
-    technologies: ["Node.js", "Express", "MongoDB", "Redis", "Azure"]
-  },
+ 
   {
     company: "Northern College of Health",
     role: "Junior Developer",
-    period: "2016 - 2018",
+    period: "2018 - 2022",
     description: "Built internal software solutions to support academic planning and administrative operations.",
     achievements: [
       "Developed student management and academic planning tools",

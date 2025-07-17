@@ -1,64 +1,84 @@
+import {
+  BrainCircuit, // AI
+  Server,       // Backend
+  Network,      // Architecture
+  Layout,       // Frontend
+  Cloud,        // DevOps
+  Database,     // Databases
+  Code,         // Languages
+  TerminalSquare, // Tools
+} from "lucide-react";
 
-import { Database, Server, Code, Cloud, Settings, Layout } from "lucide-react";
-
+// --- EXPANDED to eight granular categories for a 4x2 grid ---
 const skillsCategories = [
   {
-    name: "Backend",
+    name: "AI & Automation",
+    icon: BrainCircuit,
+    skills: ["LangChain", "RAG", "LLMs", "Vector DBs", "n8n", "Crew AI"]
+  },
+  {
+    name: "Backend Development",
     icon: Server,
-    skills: ["Node.js", "NestJS", "Express", "TypeScript", "JavaScript", "Python", "PHP"]
+    skills: ["Node.js", "NestJS", "FastAPI", "Laravel", "Express.js"]
+  },
+  {
+    name: "System Architecture",
+    icon: Network,
+    skills: ["Microservices", "REST & GraphQL", "System Design", "Message Queues"]
+  },
+  {
+    name: "Frontend Development",
+    icon: Layout,
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"]
+  },
+  {
+    name: "DevOps & Cloud",
+    icon: Cloud,
+    skills: ["AWS", "Docker", "CI/CD", "Terraform", "GitHub Actions"]
   },
   {
     name: "Databases",
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch"]
+    skills: ["PostgreSQL (pgvector)", "MongoDB", "MySQL", "Redis"]
   },
   {
-    name: "DevOps",
-    icon: Cloud,
-    skills: ["Docker", "Kubernetes", "AWS", "Google Cloud", "CI/CD", "Jenkins", "GitHub Actions"]
-  },
-  {
-    name: "Architecture",
-    icon: Settings,
-    skills: ["Microservices", "RESTful APIs", "GraphQL", "System Design", "Message Queues"]
-  },
-  {
-    name: "Tools",
+    name: "Programming Languages",
     icon: Code,
-    skills: ["Git", "Jira", "Linux", "Bash", "Postman", "Swagger", "VS Code"]
+    skills: ["Python","Java", "TypeScript", "JavaScript", "PHP", "SQL"]
   },
   {
-    name: "Frontend",
-    icon: Layout,
-    skills: ["HTML/CSS", "React", "Vue.js", "Bootstrap", "Tailwind CSS"]
-  }
+    name: "Developer Tools",
+    icon: TerminalSquare,
+    skills: ["Git", "Linux", "Bash", "Postman", "Swagger", "Jira"]
+  },
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="py-16 sm:py-24 bg-secondary/30">
       <div className="section-container">
-        <h2 className="section-title">Skills & Tools</h2>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h2 className="section-title">Skills & Technologies</h2>
+
+        {/* --- UPDATED GRID for a 4x2 layout on large screens --- */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillsCategories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <div 
-                key={category.name} 
-                className="skill-card animate-fade-in"
-                style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+              <div
+                key={category.name}
+                className="skill-card animate-fade-in p-6"
+                style={{ animationDelay: `${0.1 + index * 0.1}s` }}
               >
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-3 mb-4">
                   <Icon className="h-6 w-6 text-primary" />
                   <h3 className="text-xl font-bold">{category.name}</h3>
                 </div>
-                
-                <div className="w-full flex flex-wrap gap-2 justify-center">
+
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map(skill => (
-                    <span 
-                      key={skill} 
-                      className="px-3 py-1 text-sm rounded-full bg-background text-foreground/80"
+                    <span
+                      key={skill}
+                      className="skill-tag"
                     >
                       {skill}
                     </span>
@@ -72,3 +92,4 @@ export default function Skills() {
     </section>
   );
 }
+

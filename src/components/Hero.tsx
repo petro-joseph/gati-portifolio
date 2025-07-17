@@ -22,15 +22,21 @@ const HeroSection = () => {
               Senior Full Stack Developer
             </h2>
             <p className="text-lg mb-8 max-w-xl">
-              Building robust and scalable digital solutions from Tanzania.
-              Specialized in crafting efficient APIs and microservices that power modern applications.
+              I specialize in building robust, scalable, and intelligent web applications,
+              from complex backend systems to dynamic user interfaces
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
               <div className="tag">Laravel</div>
-              <div className="tag">NestJS</div>
+              <div className="tag">NodeJs</div>
+              <div className="tag">Python</div>
               <div className="tag">FastAPI</div>
+              <div className="tag">Vue</div>
+              <div className="tag">React</div>
+              <div className="tag">TypeScript</div>
+              <div className="tag">PostgreSQL</div>
               <div className="tag">AI</div>
               <div className="tag">LangChain</div>
+              <div className="tag">AWS</div>
               <div className="tag">Docker</div>
             </div>
             <div className="flex flex-wrap gap-4">

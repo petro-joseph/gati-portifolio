@@ -5,45 +5,90 @@ import { useTheme } from "./ThemeProvider";
 const projects = [
   {
     title: "Kazi Hub",
-    description: "KaziHub uses advanced AI to find perfect job matches, optimize your resume, and automate applications so you can focus on landing interviews.",
+    description:
+      "Land your dream job faster — without the overwhelm. Kazi Hub uses AI to find your best-fit roles, fine-tune your resume, and even automate applications — so you spend less time stressing and more time interviewing.",
     imageLight: "/projects/kazihub.png",
     imageDark: "/projects/kazihub-dark.png",
     liveLink: "https://kazihub.vercel.app",
-    github: "https://github.com/petroghati/jobconnector",
-    technologies: ["FastAPI", "TensorFlow","React", "TypeScript", "PostgreSQL", "Redis", "Docker"],
+    github: "https://github.com/petroGati/jobconnector",
+    technologies: [
+      "FastAPI",
+      "TensorFlow",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+    ],
+    features: ["AI-Powered", "Job Automation"],
   },
   {
     title: "Project Management App",
-    description: "A collaborative tool designed for teams to efficiently manage projects, tasks, deadlines, asset tracking, inventory control, financial oversight, and time tracking.",
+    description:
+      "All-in-one team collaboration — simplified. Say goodbye to scattered spreadsheets and fragmented tools. This powerful app gives your team a single place to track tasks, deadlines, assets, inventories, budgets, and time — making project coordination effortless.",
     imageLight: "/projects/novaerp.png",
     imageDark: "/projects/novaerp-dark.png",
     liveLink: "https://novaerp.vercel.app",
     github: "https://github.com/petro-joseph/project-management-system",
-    technologies: ["React", "Express", "PostgreSQL", "Docker", "NGINX", "Redis","Grafana"],
+    technologies: [
+      "React",
+      "Express",
+      "PostgreSQL",
+      "Docker",
+      "NGINX",
+      "Redis",
+      "Grafana",
+    ],
+    features: ["Team Tool", "ERP"],
+  },
+  
+  {
+    title: "FocusFlow",
+    description:
+      "Boost your focus. Crush your to-do list. Stay in control. FocusFlow is the ultimate productivity planner that combines task tracking, Pomodoro timer, visual time blocking, and built-in lo-fi music — all designed to help you stay focused and get more done, effortlessly.The App Gained 200+ users in its first month of lunch ",
+    imageLight: "/projects/focusflow.png",
+    imageDark: "/projects/focusflow.png",
+    liveLink: "https://focusflow25.vercel.app/",
+    github: "https://github.com/petroGati/focusflow",
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Zustand",
+      "Serverless",
+      "Vercel",
+    ],
+    features: ["Productivity", "Pomodoro", "Minimal UI", "Productivity", "200+ Users"],
   },
   {
-    title: "Bulk SMS System",
-    description: "Enterprise messaging platform for sending bulk SMS with scheduling, templates and analytics.",
-    imageLight: "/projects/bulk-sms-light.png",
-    imageDark: "/projects/bulk-sms-dark.png",
-    liveLink: "https://sms.example.com",
-    github: "https://github.com/petroghati/bulk-sms",
-    technologies: ["TypeScript", "NestJS", "MySQL", "RabbitMQ", "Docker"],
-  },
-  {
-    title: "AI Data Analysis App",
-    description: "AI-powered data analysis tool for extracting insights from large datasets with visualization capabilities.",
-    imageLight: "/projects/ai-data-light.png",
-    imageDark: "/projects/ai-data-dark.png",
-    liveLink: "https://aidata.example.com",
-    github: "https://github.com/petroghati/ai-data-analysis",
-    technologies: ["Python", "FastAPI", "TensorFlow", "PostgreSQL", "React"],
+    title: "ChatForger",
+    description:
+      "Turn your content into a 24/7 AI support agent — in minutes. ChatForger lets you build intelligent chatbots trained on your documents and website links — no code needed. Deliver instant, accurate support to your customers with a chatbot that actually understands your business.",
+    imageLight: "/projects/chatforge-light.png",
+    imageDark: "/projects/chatforge-dark.png",
+    liveLink: "https://chatforger.vercel.app/",
+    github: "https://github.com/petroGati/chatforger",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "PostgreSQL",
+      "pgvector",
+      "Vercel AI SDK",
+      "LangChain",
+      "Pinecone",
+    ],
+    features: ["AI-Powered", "No-Code", "Customer Support"],
   },
 ];
 
 export default function Projects() {
   const [imageLoadErrors, setImageLoadErrors] = useState<{ [key: string]: boolean }>({});
-  const { theme } = useTheme(); // Get the current theme from ThemeProvider
+  const { theme } = useTheme();
 
   return (
     <section id="projects" className="py-16 sm:py-24">
@@ -79,7 +124,18 @@ export default function Projects() {
                 </div>
 
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {project.features?.map((feature) => (
+                    <span
+                      key={feature}
+                      className="px-2 py-1 bg-secondary/20 text-xs font-medium rounded-full text-secondary-foreground"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
                 <p className="text-foreground/70 mb-4">{project.description}</p>
+
 
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.technologies.map((tech) => (
