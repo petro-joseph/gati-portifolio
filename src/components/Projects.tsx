@@ -10,7 +10,7 @@ const projects = [
     imageLight: "/projects/kazihub.png",
     imageDark: "/projects/kazihub-dark.png",
     liveLink: "https://kazihub.vercel.app",
-    github: "https://github.com/petroGati/jobconnector",
+    github: "https://github.com/petro-joseph",
     technologies: [
       "FastAPI",
       "TensorFlow",
@@ -28,7 +28,7 @@ const projects = [
       "All-in-one team collaboration — simplified. Say goodbye to scattered spreadsheets and fragmented tools. This powerful app gives your team a single place to track tasks, deadlines, assets, inventories, budgets, and time — making project coordination effortless.",
     imageLight: "/projects/novaerp.png",
     imageDark: "/projects/novaerp-dark.png",
-    liveLink: "https://novaerp.vercel.app",
+    liveLink: "https://novaerp.vercel.app/login",
     github: "https://github.com/petro-joseph/project-management-system",
     technologies: [
       "React",
@@ -49,7 +49,7 @@ const projects = [
     imageLight: "/projects/focusflow.png",
     imageDark: "/projects/focusflow.png",
     liveLink: "https://focusflow25.vercel.app/",
-    github: "https://github.com/petroGati/focusflow",
+    github: "https://github.com/petro-joseph",
     technologies: [
       "React",
       "Next.js",
@@ -69,7 +69,7 @@ const projects = [
     imageLight: "/projects/chatforge-light.png",
     imageDark: "/projects/chatforge-dark.png",
     liveLink: "https://chatforger.vercel.app/",
-    github: "https://github.com/petroGati/chatforger",
+    github: "https://github.com/petro-joseph",
     technologies: [
       "Next.js",
       "React",
